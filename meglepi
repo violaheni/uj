@@ -1,0 +1,8 @@
+#!/bin/bash
+
+lxc init ubuntu:16.04 heni
+lxc start heni
+sleep 30
+lxc exec heni -- apt install mc -y
+lxc exec heni -- apt update -y
+lxc exec heni -- apt upgrade -y
